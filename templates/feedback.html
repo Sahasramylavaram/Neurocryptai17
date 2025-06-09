@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Feedback</h2>
+{% if thanks %}
+<p>Thank you for your feedback!</p>
+{% endif %}
+<form method="post">
+  <textarea name="feedback" placeholder="Your feedback here..." required></textarea>
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

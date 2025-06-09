@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Message History</h2>
+<ul>
+  {% for item in history %}
+    <li><b>{{ item.message }}</b> | Urgency: {{ item.urgency }} | Priority: {{ item.priority }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

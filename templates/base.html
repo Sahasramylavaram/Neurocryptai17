@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title or "NeuroCryptAI" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>
+  {% if session.user %}
+    <a href="{{ url_for('chat') }}">Chat</a>
+    <a href="{{ url_for('show_history') }}">History</a>
+    <a href="{{ url_for('feedback') }}">Feedback</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  {% endif %}
+</nav>
+<main>
+{% block body %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Chat</h2>
+<form method="post">
+  <textarea name="message" placeholder="Enter your message" required></textarea>
+  <label>Urgency:
+    <select name="urgency">
+      <option>Low</option><option>Medium</option><option>High</option>
+    </select>
+  </label>
+  <label>Priority:
+    <select name="priority">
+      <option>Normal</option><option>Important</option><option>Critical</option>
+    </select>
+  </label>
+  <button type="submit">Send</button>
+</form>
+{% if response %}
+<p><strong>Server Response:</strong> {{ response }}</p>
+{% endif %}
+{% endblock %}

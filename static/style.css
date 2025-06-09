@@ -1,0 +1,32 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  padding: 2rem;
+}
+nav {
+  background: #333;
+  padding: 1rem;
+}
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+textarea, input, select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 0.5rem;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
